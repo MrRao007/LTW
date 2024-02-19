@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome - LahoreTourism.com</title>
+    <link rel="stylesheet" href="Main-page-css.css">
+
+</head>
+
+<body>
+    <div id="home"></div>
+    <div class="LandingPage-Bg">
+        <div class="LandingPageImage">
+            <div>
+                <img src="LandingPageCollege02.jpg" alt="LandingPageCollege02" style="width: 100% ; height: 700px;">
+            </div>
+        </div>
+    </div>
+
+    <div class="Nav-bar" id="Nav-bar">
+        <a class="anchor-button" href="#home">Home</a>
+        <a class="anchor-button" href="#drop-list">List</a>
+        <a class="anchor-button" href="Guide.html">Guide</a>
+        <a class="anchor-button" href="#about">About</a>
+        <a class="anchor-button" href="dev_info.html">Contact us</a>
+        <a class="anchor-button" href="feedback.html">Feedback</a>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            window.onscroll = function () {
+                // Get the navbar element
+                var navbar = document.getElementById("Nav-bar");
+
+                // Get the offset position of the navbar
+                var sticky = navbar.offsetTop;
+
+                // Add the sticky class to the navbar when you reach its scroll position.
+                // Remove "sticky" when you leave the scroll position.
+                if (window.pageYOffset >= sticky) {
+                    navbar.classList.add("sticky");
+                } else {
+                    navbar.classList.remove("sticky");
+                }
+            };
+        });
+
+    </script>
+    <!-- auto slider code -->
+    <div class="auto-slider-bg">
+        <div
+            style="text-align: center; color: black; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; letter-spacing: 1em;">
+            <h3>LONG LIVE PAKISTAN</h3>
+        </div>
+        <div class="slider-auto">
+            <img src="downloads/BadshahiMosqTopWide.jpg" alt="TopWide">
+            <img src="downloads/BlueOldArchitect.jpg" alt="BlueOldArchitect">
+            <img src="downloads/faisalmosq.jpg" alt="faisalmosq">
+            <img src="downloads/PakEmbassy.jpg" alt="PakEmbassy">
+            <img src="downloads/River_Swat,_KPK.jpg" alt="River_Swat">
+        </div>
+
+        <script>
+            // Auto slider logic
+            var slideIndex = 0;
+            showSlides();
+
+            function showSlides() {
+                var slides = document.getElementsByClassName("slider-auto")[0].getElementsByTagName("img");
+
+                // Hide all slides
+                for (var i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+
+                // Increment slide index
+                slideIndex++;
+
+                // Reset slide index if it exceeds the number of slides
+                if (slideIndex > slides.length) {
+                    slideIndex = 1;
+                }
+
+                // Show current slide
+                slides[slideIndex - 1].style.display = "block";
+
+                // Auto slide every 3 seconds (adjust as needed)
+                setTimeout(showSlides, 1500);
+            }
+        </script>
+    </div>
+
+
+
+    <!-- Front page images for previews -->
+
+    <!-- Mood selection section -->
+    <div id="drop-list"></div>
+
+    <div class="MoodSelectionBg">
+
+
+        <div class="BotImage">
+            <img src="downloads/BotImage.png" alt="BotImage">
+        </div>
+        <div style="margin-left: 15%;">
+            <div style="color: white;">
+                <h2>Hey Buddy!</h2>
+                <h3>Let me know where you want to go?</h3>
+                <p style="text-align: center;">Select your current mood:</p>
+            </div>
+            <select id="MoodOption" onchange="SelectedMood()">
+                <option value="">Select option</option>
+                <option value="Historical">Historical</option>
+                <option value="Shopping">Shopping Malls</option>
+                <option value="Parks">Parks & Picinc</option>
+                <option value="Study">Study & research</option>
+                <option value="Food">Food Streets</option>
+                <option value="Random">Random location</option>
+            </select>
+            <script>
+                function SelectedMood() {
+                    var mood = document.getElementById("MoodOption").value;
+
+                    if (mood == "Historical") {
+                        window.location.href = "Historical.html";
+                    } else if (mood == "Shopping") {
+                        window.location.href = "Shopping.html";
+                    } else if (mood == "Parks") {
+                        window.location.href = "Parks.html";
+                    } else if (mood == "Study") {
+                        window.location.href = "Study.html";
+                    } else if (mood == "Food") {
+                        window.location.href = "Food.html";
+                    }
+                }
+            </script>
+        </div>
+
+    </div>
+
+    <div class="FrontPagePreview1">
+        <div>
+            <p>
+            <h1>History of Lahore..</h1>
+            <br>
+            <h4>Lahore was founded by 'Loh' the son of "Rama Chandra". However the recorded
+                history of Lahore dates back to 850 A.D conquered by Mahmoud Ghazni in 1021 A.D. It was made the capital
+                of
+                the Ghaznavid east of the Indus and later capital of the entire Ghaznavid Empire by Masud, the son of
+                Mahmood.
+
+                The city has had a turbulent history. It was the capital of the Ghaznavid dynasty from 1163 to 1186. A
+                Mongol army sacked Lahore in 1241. During the 14th century the city was repeatedly attacked by the
+                Mongols
+                until 1398, when it fell under the control of the Turkic conqueror Timur.
+                Lahore was the capital of multiple empires throughout its history, including the Hindu Shahis,
+                Ghaznavids,
+                and Delhi Sultanate in the medieval era. Lahore reached the height of its splendor under the Mughal
+                Empire
+                between the late 16th and early 18th century and served as its capital city for many years.</h4>
+
+            <h2 style="text-align: center;">Capital:</h2>
+            <h4>
+                Lahore was the capital city of Emperor Akbar from 1584 to 1598. He built the massive Lahore Fort on the
+                foundations of a previous fort and enclosed the city within a red brick wall boasting 12 gates. Jahangir
+                and
+                Shah Jahan extended the fort, built palaces and tombs, and laid out gardens.
+            </h4>
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="FrontPagePreview2">
+        <div>
+            <p>
+            <h1>Region:</h1>
+            <h4>
+                Lahore District (Punjabi: ضلع لہور; Urdu: ضلع لاہور) is a district in the Punjab province of Pakistan,
+                mainly consisting of the city of Lahore. The total area is 1,772 square kilometres (684 sq mi).
+                <br><br>
+
+                <div>
+                    <img src="downloads/GoogleMap_Lahore.png" alt="GoogleMap_Lahore" width="100%">
+                </div>
+
+            </h4>
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="FrontPagePreview3">
+        <div>
+            <p>
+            <h1>Culture:</h1>
+            <h4>
+                The culture of Lahori People is a manifestation of the lifestyle, festivals, literature, music,
+                language,
+                politics, cuisine and socio-economic conditions of its people. It is characterised by the blending of
+                South
+                Asian, Middle Eastern, Central Asian and Western influences.
+                <br>
+                The Shalwar kameez, Achkan Sherwani and Kurta shalwar Kameez are the national dresses of Pakistan and is
+                worn by men and women in all five provinces of Punjab, Sindh, Balochistan, Khyber Pakhtunkhwa, and
+                Gilgit-Baltistan in the country and in Azad Kashmir. Shalwar refers to loose trousers and kameez refers
+                to
+                shirts.
+                <br><br><br>
+                <div>
+                    <img src="downloads/Culture_lahore.jpg" alt="Culture_lahore" width="100%">
+                </div>
+            </h4>
+            </p>
+
+        </div>
+
+    </div>
+    <div id="about">
+
+    </div>
+    <div class="instruction">
+        <h3>
+            <p> This section is Under development -
+                Navigate the Nav-bar or interact with bot options for further functionality of the webpage</p>
+        </h3>
+    </div>
+
+
+</body>
+
+</html>
